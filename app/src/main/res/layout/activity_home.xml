@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context="com.sctaylor.room.features.home.HomeActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/diode_coloured" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="RGB LED"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Control the RGB LED" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+                        <RelativeLayout
+                            android:id="@+id/colourPalleteHolder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/background_border"
+                            android:padding="2dp">
+
+                            <ImageView
+                                android:id="@+id/colourPallete"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="false"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="false"
+                                android:background="@android:color/background_light" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/colourPalleteHolder"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="false"
+                            android:layout_marginBottom="5dp"
+                            android:text="Colour" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/sms_coloured" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="LCD Message"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Send a message to the LCD" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp"
+                        android:gravity="center">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <android.support.design.widget.TextInputLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/editTextMessage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:hint="Message"
+                                    android:inputType="textPersonName" />
+                            </android.support.design.widget.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/buttonMessageSend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Send" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/temperature_coloured" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Temperature"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="What is the temperature in the room?" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/textViewTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="30.2 °C "
+                            android:textSize="30sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/update" />
+
+                            <TextView
+                                android:id="@+id/textViewTempTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="00:00:05" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/humidity_coloured" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Humidity"
+                                android:textAppearance="@android:style/TextAppearance.Material.Large" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="What is the humidity in the room?" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/textViewHumidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="51.0%"
+                            android:textSize="30sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentLeft="false"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/update" />
+
+                            <TextView
+                                android:id="@+id/textViewHumidityTimer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="00:00:05" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Reset" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
