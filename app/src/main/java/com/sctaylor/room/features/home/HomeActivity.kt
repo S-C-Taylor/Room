@@ -118,6 +118,7 @@ class HomeActivity : AppCompatActivity() {
     private fun reset(){
         colourPallete.setBackgroundColor(Color.BLACK)
         editTextMessage.setText("")
+        currentColour = Color.BLACK;
         textViewHumidity.text = "-- %"
         textViewTemp.text = "-- °C"
     }

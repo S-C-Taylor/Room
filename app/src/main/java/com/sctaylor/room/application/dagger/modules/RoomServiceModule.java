@@ -40,9 +40,9 @@ public class RoomServiceModule {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
-                .baseUrl("http://124.190.102.243/")
                 //.baseUrl("http://192.168.0.16/")
                 //.baseUrl("https://10ebecc7-fe52-4466-ab68-0cb2fce626ce.mock.pstmn.io")
+                .baseUrl("http://192.168.43.13/")
                 .build();
     }
 
