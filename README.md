@@ -4,6 +4,7 @@ An Android App to control the Room IoT.
 This app was made as a proof of concept for an DIY IoT presenation.
 
 Related project: https://github.com/S-C-Taylor/esp8266-examples
+
 Slides: goo.gl/ezdvsB
 
 
